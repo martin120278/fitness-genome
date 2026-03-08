@@ -29,6 +29,7 @@
 		AA010032 /* StepButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA000032 /* StepButton.swift */; };
 		AA010040 /* OnboardingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA000040 /* OnboardingViewModel.swift */; };
 		AA010050 /* HealthKitService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA000050 /* HealthKitService.swift */; };
+		AA010051 /* WeeklyPlanGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA000051 /* WeeklyPlanGenerator.swift */; };
 		AA010060 /* UserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA000060 /* UserRepository.swift */; };
 		AA010070 /* Color+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA000070 /* Color+Extensions.swift */; };
 		AA010071 /* View+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA000071 /* View+Extensions.swift */; };
@@ -60,6 +61,7 @@
 		AA000032 /* StepButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepButton.swift; sourceTree = "<group>"; };
 		AA000040 /* OnboardingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewModel.swift; sourceTree = "<group>"; };
 		AA000050 /* HealthKitService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthKitService.swift; sourceTree = "<group>"; };
+		AA000051 /* WeeklyPlanGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeeklyPlanGenerator.swift; sourceTree = "<group>"; };
 		AA000060 /* UserRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepository.swift; sourceTree = "<group>"; };
 		AA000070 /* Color+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extensions.swift"; sourceTree = "<group>"; };
 		AA000071 /* View+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extensions.swift"; sourceTree = "<group>"; };
@@ -183,6 +185,7 @@
 			isa = PBXGroup;
 			children = (
 				AA000050 /* HealthKitService.swift */,
+				AA000051 /* WeeklyPlanGenerator.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -316,6 +319,7 @@
 				AA010032 /* StepButton.swift in Sources */,
 				AA010040 /* OnboardingViewModel.swift in Sources */,
 				AA010050 /* HealthKitService.swift in Sources */,
+				AA010051 /* WeeklyPlanGenerator.swift in Sources */,
 				AA010060 /* UserRepository.swift in Sources */,
 				AA010070 /* Color+Extensions.swift in Sources */,
 				AA010071 /* View+Extensions.swift in Sources */,
