@@ -48,7 +48,7 @@ final class OnboardingViewModel {
     // Paso 8: Experiencia por disciplina
     var disciplineExperience: [ActivityType: ExperienceLevel] = {
         var dict: [ActivityType: ExperienceLevel] = [:]
-        ActivityType.allCases.forEach { dict[$0] = .none }
+        ActivityType.allCases.forEach { dict[$0] = ExperienceLevel.none }
         return dict
     }()
 
