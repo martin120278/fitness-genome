@@ -25,9 +25,11 @@
 		AA010029 /* ActivityPreferencesStepView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA000029 /* ActivityPreferencesStepView.swift */; };
 		AA01002A /* OnboardingCompleteStepView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA00002A /* OnboardingCompleteStepView.swift */; };
 		AA010030 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA000030 /* HomeView.swift */; };
+		AA010033 /* WeeklyPlanView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA000033 /* WeeklyPlanView.swift */; };
 		AA010031 /* OnboardingProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA000031 /* OnboardingProgressBar.swift */; };
 		AA010032 /* StepButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA000032 /* StepButton.swift */; };
 		AA010040 /* OnboardingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA000040 /* OnboardingViewModel.swift */; };
+		AA010041 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA000041 /* HomeViewModel.swift */; };
 		AA010050 /* HealthKitService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA000050 /* HealthKitService.swift */; };
 		AA010051 /* WeeklyPlanGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA000051 /* WeeklyPlanGenerator.swift */; };
 		AA010060 /* UserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA000060 /* UserRepository.swift */; };
@@ -57,9 +59,11 @@
 		AA000029 /* ActivityPreferencesStepView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityPreferencesStepView.swift; sourceTree = "<group>"; };
 		AA00002A /* OnboardingCompleteStepView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCompleteStepView.swift; sourceTree = "<group>"; };
 		AA000030 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		AA000033 /* WeeklyPlanView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeeklyPlanView.swift; sourceTree = "<group>"; };
 		AA000031 /* OnboardingProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingProgressBar.swift; sourceTree = "<group>"; };
 		AA000032 /* StepButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepButton.swift; sourceTree = "<group>"; };
 		AA000040 /* OnboardingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewModel.swift; sourceTree = "<group>"; };
+		AA000041 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		AA000050 /* HealthKitService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthKitService.swift; sourceTree = "<group>"; };
 		AA000051 /* WeeklyPlanGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeeklyPlanGenerator.swift; sourceTree = "<group>"; };
 		AA000060 /* UserRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepository.swift; sourceTree = "<group>"; };
@@ -160,6 +164,7 @@
 			isa = PBXGroup;
 			children = (
 				AA000030 /* HomeView.swift */,
+				AA000033 /* WeeklyPlanView.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -177,6 +182,7 @@
 			isa = PBXGroup;
 			children = (
 				AA000040 /* OnboardingViewModel.swift */,
+				AA000041 /* HomeViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -315,9 +321,11 @@
 				AA010029 /* ActivityPreferencesStepView.swift in Sources */,
 				AA01002A /* OnboardingCompleteStepView.swift in Sources */,
 				AA010030 /* HomeView.swift in Sources */,
+				AA010033 /* WeeklyPlanView.swift in Sources */,
 				AA010031 /* OnboardingProgressBar.swift in Sources */,
 				AA010032 /* StepButton.swift in Sources */,
 				AA010040 /* OnboardingViewModel.swift in Sources */,
+				AA010041 /* HomeViewModel.swift in Sources */,
 				AA010050 /* HealthKitService.swift in Sources */,
 				AA010051 /* WeeklyPlanGenerator.swift in Sources */,
 				AA010060 /* UserRepository.swift in Sources */,

@@ -8,6 +8,8 @@ import SwiftData
 struct HomeView: View {
     @Query private var profiles: [UserProfile]
     @Query private var genomes: [FitnessGenomeModel]
+    @Environment(\.modelContext) private var modelContext
+    @State private var viewModel = HomeViewModel()
 
     private var profile: UserProfile? { profiles.first }
     private var genome: FitnessGenomeModel? { genomes.first }
@@ -23,7 +25,7 @@ struct HomeView: View {
                     genomeCard
                         .padding(.horizontal, 20)
 
-                    comingSoonBanner
+                    planSection
                         .padding(.horizontal, 20)
 
                     Spacer(minLength: 32)
@@ -31,7 +33,38 @@ struct HomeView: View {
             }
             .navigationTitle("Fitness Genome")
             .navigationBarTitleDisplayMode(.large)
+            .onAppear { loadPlanIfNeeded() }
         }
+    }
+
+    // MARK: - Sección del plan semanal
+
+    @ViewBuilder
+    private var planSection: some View {
+        if viewModel.isLoading {
+            HStack(spacing: 12) {
+                ProgressView()
+                Text("Generando tu plan...")
+                    .font(.subheadline)
+                    .foregroundStyle(.secondary)
+            }
+            .frame(maxWidth: .infinity)
+            .padding()
+            .cardStyle()
+        } else if let plan = viewModel.currentPlan {
+            WeeklyPlanView(plan: plan)
+        } else if let error = viewModel.errorMessage {
+            Label(error, systemImage: "exclamationmark.triangle")
+                .font(.caption)
+                .foregroundStyle(.red)
+                .padding()
+                .cardStyle()
+        }
+    }
+
+    private func loadPlanIfNeeded() {
+        guard let profile, let genome else { return }
+        viewModel.loadOrGeneratePlan(profile: profile, genome: genome, context: modelContext)
     }
 
     // MARK: - Saludo
@@ -120,37 +153,6 @@ struct HomeView: View {
         .cardStyle()
     }
 
-    // MARK: - Banner próximas features
-
-    private var comingSoonBanner: some View {
-        VStack(spacing: 14) {
-            Text("Próximamente")
-                .font(.headline)
-                .frame(maxWidth: .infinity, alignment: .leading)
-
-            ForEach(upcomingFeatures, id: \.0) { icon, title, desc in
-                HStack(spacing: 12) {
-                    Image(systemName: icon)
-                        .font(.title3)
-                        .foregroundStyle(Color.fgGreen)
-                        .frame(width: 32)
-                    VStack(alignment: .leading, spacing: 2) {
-                        Text(title).font(.subheadline.weight(.medium))
-                        Text(desc).font(.caption).foregroundStyle(.secondary)
-                    }
-                }
-            }
-        }
-        .padding(16)
-        .cardStyle()
-    }
-
-    private var upcomingFeatures: [(String, String, String)] {[
-        ("calendar.badge.plus", "Plan semanal inteligente", "Combinación óptima de actividades"),
-        ("checkmark.circle.fill", "Registro post-sesión", "Feedback y métricas de cada entrenamiento"),
-        ("heart.text.square.fill", "Integración HealthKit", "Pasos, sueño, HR y workouts automáticos"),
-        ("chart.line.uptrend.xyaxis", "Dashboard de progreso", "Evolución de tu Genome semana a semana")
-    ]}
 }
 
 // MARK: - Fila de dimensión del genome
@@ -190,5 +192,5 @@ private struct HomeDimensionRow: View {
 
 #Preview {
     HomeView()
-        .modelContainer(for: [UserProfile.self, FitnessGenomeModel.self], inMemory: true)
+        .modelContainer(for: [UserProfile.self, FitnessGenomeModel.self, WeeklyPlan.self], inMemory: true)
 }
