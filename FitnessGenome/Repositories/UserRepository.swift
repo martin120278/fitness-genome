@@ -27,7 +27,7 @@ final class UserRepository {
         let descriptor = FetchDescriptor<UserProfile>(
             predicate: #Predicate { $0.hasCompletedOnboarding == true }
         )
-        return (try? context.fetch(descriptor).count ?? 0) ?? 0 > 0
+        return (try? context.fetch(descriptor))?.isEmpty == false
     }
 
     func updateProfile(_ profile: UserProfile) throws {
@@ -37,9 +37,8 @@ final class UserRepository {
     // MARK: - FitnessGenome
 
     func fetchGenome(for userId: UUID) throws -> FitnessGenomeModel? {
-        let idString = userId.uuidString
         let descriptor = FetchDescriptor<FitnessGenomeModel>(
-            predicate: #Predicate { $0.userId == UUID(uuidString: idString)! },
+            predicate: #Predicate { $0.userId == userId },
             sortBy: [SortDescriptor(\.lastUpdated, order: .reverse)]
         )
         return try context.fetch(descriptor).first
@@ -53,9 +52,8 @@ final class UserRepository {
     // MARK: - SessionLog
 
     func fetchRecentSessions(userId: UUID, limit: Int = 20) throws -> [SessionLog] {
-        let idString = userId.uuidString
         var descriptor = FetchDescriptor<SessionLog>(
-            predicate: #Predicate { $0.userId == UUID(uuidString: idString)! },
+            predicate: #Predicate { $0.userId == userId },
             sortBy: [SortDescriptor(\.date, order: .reverse)]
         )
         descriptor.fetchLimit = limit
@@ -70,9 +68,8 @@ final class UserRepository {
     // MARK: - WeeklyPlan
 
     func fetchActiveWeeklyPlan(userId: UUID) throws -> WeeklyPlan? {
-        let idString = userId.uuidString
         let descriptor = FetchDescriptor<WeeklyPlan>(
-            predicate: #Predicate { $0.userId == UUID(uuidString: idString)! && $0.isActive == true },
+            predicate: #Predicate { $0.userId == userId && $0.isActive == true },
             sortBy: [SortDescriptor(\.weekStartDate, order: .reverse)]
         )
         return try context.fetch(descriptor).first
