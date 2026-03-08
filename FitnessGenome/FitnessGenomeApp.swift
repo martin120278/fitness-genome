@@ -16,12 +16,17 @@ struct FitnessGenomeApp: App {
             WeeklyPlan.self,
             SessionLog.self
         ])
-        let config = ModelConfiguration(schema: schema, isStoredInMemoryOnly: false)
-        do {
-            return try ModelContainer(for: schema, configurations: [config])
-        } catch {
-            fatalError("No se pudo inicializar SwiftData: \(error)")
+        // Intentar primero con almacenamiento persistente; fallback en memoria
+        if let container = try? ModelContainer(
+            for: schema,
+            configurations: [ModelConfiguration(schema: schema, isStoredInMemoryOnly: false)]
+        ) {
+            return container
         }
+        return try! ModelContainer(
+            for: schema,
+            configurations: [ModelConfiguration(schema: schema, isStoredInMemoryOnly: true)]
+        )
     }()
 
     var body: some Scene {
