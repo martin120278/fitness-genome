@@ -33,4 +33,5 @@ jobs:
             CODE_SIGNING_ALLOWED=NO \
             CODE_SIGNING_REQUIRED=NO \
             SWIFT_VERSION=6.0 \
+            ENABLE_ON_DEMAND_RESOURCES=NO \
             clean build 2>&1
