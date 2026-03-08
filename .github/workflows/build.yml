@@ -53,17 +53,10 @@ jobs:
           echo "Bundle ID: $BUNDLE_ID"
 
           # Find best available iPhone simulator (iOS 17 or 18)
-          SIM_UDID=$(xcrun simctl list devices available -j | python3 - <<'PYEOF'
-import json, sys
-data = json.load(sys.stdin)
-for runtime in sorted(data["devices"].keys(), reverse=True):
-    if "iOS-17" in runtime or "iOS-18" in runtime:
-        for dev in data["devices"][runtime]:
-            if "iPhone" in dev.get("name", "") and dev.get("isAvailable", False):
-                print(dev["udid"])
-                exit(0)
-PYEOF
-)
+          SIM_UDID=$(xcrun simctl list devices available 2>/dev/null | \
+            grep "iPhone" | \
+            grep -oE "[A-F0-9]{8}-[A-F0-9]{4}-[A-F0-9]{4}-[A-F0-9]{4}-[A-F0-9]{12}" | \
+            head -1)
           echo "Simulator: $SIM_UDID"
 
           # Boot simulator
