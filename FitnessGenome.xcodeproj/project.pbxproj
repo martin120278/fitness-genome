@@ -1,0 +1,524 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AA010001 /* FitnessGenomeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA000001 /* FitnessGenomeApp.swift */; };
+		AA010010 /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA000010 /* UserProfile.swift */; };
+		AA010011 /* FitnessGenomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA000011 /* FitnessGenomeModel.swift */; };
+		AA010012 /* WeeklyPlan.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA000012 /* WeeklyPlan.swift */; };
+		AA010013 /* SessionLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA000013 /* SessionLog.swift */; };
+		AA010014 /* ActivityType.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA000014 /* ActivityType.swift */; };
+		AA010020 /* OnboardingContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA000020 /* OnboardingContainerView.swift */; };
+		AA010021 /* WelcomeStepView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA000021 /* WelcomeStepView.swift */; };
+		AA010022 /* PersonalInfoStepView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA000022 /* PersonalInfoStepView.swift */; };
+		AA010023 /* FitnessLevelStepView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA000023 /* FitnessLevelStepView.swift */; };
+		AA010024 /* InjuriesStepView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA000024 /* InjuriesStepView.swift */; };
+		AA010025 /* GoalsStepView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA000025 /* GoalsStepView.swift */; };
+		AA010026 /* TimeEquipmentStepView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA000026 /* TimeEquipmentStepView.swift */; };
+		AA010027 /* SleepStressStepView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA000027 /* SleepStressStepView.swift */; };
+		AA010028 /* DisciplineExperienceStepView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA000028 /* DisciplineExperienceStepView.swift */; };
+		AA010029 /* ActivityPreferencesStepView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA000029 /* ActivityPreferencesStepView.swift */; };
+		AA01002A /* OnboardingCompleteStepView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA00002A /* OnboardingCompleteStepView.swift */; };
+		AA010030 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA000030 /* HomeView.swift */; };
+		AA010031 /* OnboardingProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA000031 /* OnboardingProgressBar.swift */; };
+		AA010032 /* StepButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA000032 /* StepButton.swift */; };
+		AA010040 /* OnboardingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA000040 /* OnboardingViewModel.swift */; };
+		AA010050 /* HealthKitService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA000050 /* HealthKitService.swift */; };
+		AA010060 /* UserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA000060 /* UserRepository.swift */; };
+		AA010070 /* Color+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA000070 /* Color+Extensions.swift */; };
+		AA010071 /* View+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA000071 /* View+Extensions.swift */; };
+		AA010080 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA000080 /* HealthKit.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		AA000001 /* FitnessGenomeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FitnessGenomeApp.swift; sourceTree = "<group>"; };
+		AA000003 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AA000004 /* FitnessGenome.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FitnessGenome.entitlements; sourceTree = "<group>"; };
+		AA000010 /* UserProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfile.swift; sourceTree = "<group>"; };
+		AA000011 /* FitnessGenomeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FitnessGenomeModel.swift; sourceTree = "<group>"; };
+		AA000012 /* WeeklyPlan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeeklyPlan.swift; sourceTree = "<group>"; };
+		AA000013 /* SessionLog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionLog.swift; sourceTree = "<group>"; };
+		AA000014 /* ActivityType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityType.swift; sourceTree = "<group>"; };
+		AA000020 /* OnboardingContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingContainerView.swift; sourceTree = "<group>"; };
+		AA000021 /* WelcomeStepView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeStepView.swift; sourceTree = "<group>"; };
+		AA000022 /* PersonalInfoStepView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalInfoStepView.swift; sourceTree = "<group>"; };
+		AA000023 /* FitnessLevelStepView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FitnessLevelStepView.swift; sourceTree = "<group>"; };
+		AA000024 /* InjuriesStepView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InjuriesStepView.swift; sourceTree = "<group>"; };
+		AA000025 /* GoalsStepView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalsStepView.swift; sourceTree = "<group>"; };
+		AA000026 /* TimeEquipmentStepView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeEquipmentStepView.swift; sourceTree = "<group>"; };
+		AA000027 /* SleepStressStepView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SleepStressStepView.swift; sourceTree = "<group>"; };
+		AA000028 /* DisciplineExperienceStepView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisciplineExperienceStepView.swift; sourceTree = "<group>"; };
+		AA000029 /* ActivityPreferencesStepView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityPreferencesStepView.swift; sourceTree = "<group>"; };
+		AA00002A /* OnboardingCompleteStepView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCompleteStepView.swift; sourceTree = "<group>"; };
+		AA000030 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		AA000031 /* OnboardingProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingProgressBar.swift; sourceTree = "<group>"; };
+		AA000032 /* StepButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepButton.swift; sourceTree = "<group>"; };
+		AA000040 /* OnboardingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewModel.swift; sourceTree = "<group>"; };
+		AA000050 /* HealthKitService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthKitService.swift; sourceTree = "<group>"; };
+		AA000060 /* UserRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepository.swift; sourceTree = "<group>"; };
+		AA000070 /* Color+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extensions.swift"; sourceTree = "<group>"; };
+		AA000071 /* View+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extensions.swift"; sourceTree = "<group>"; };
+		AA000080 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
+		AA000099 /* FitnessGenome.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FitnessGenome.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AA000090 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AA002000 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AA010080 /* HealthKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		AA003000 /* FitnessGenome */ = {
+			isa = PBXGroup;
+			children = (
+				AA000001 /* FitnessGenomeApp.swift */,
+				AA000003 /* Info.plist */,
+				AA000004 /* FitnessGenome.entitlements */,
+				AA000090 /* Assets.xcassets */,
+				GG000002 /* Models */,
+				GG000003 /* Views */,
+				GG000008 /* ViewModels */,
+				GG000009 /* Services */,
+				GG000010 /* Repositories */,
+				GG000011 /* Extensions */,
+			);
+			path = FitnessGenome;
+			sourceTree = "<group>";
+		};
+		GG000001 /* main group */ = {
+			isa = PBXGroup;
+			children = (
+				AA003000 /* FitnessGenome */,
+				GG000099 /* Frameworks */,
+				GG000098 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		GG000002 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				AA000010 /* UserProfile.swift */,
+				AA000011 /* FitnessGenomeModel.swift */,
+				AA000012 /* WeeklyPlan.swift */,
+				AA000013 /* SessionLog.swift */,
+				AA000014 /* ActivityType.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		GG000003 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				GG000004 /* Onboarding */,
+				GG000006 /* Main */,
+				GG000007 /* Components */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		GG000004 /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				AA000020 /* OnboardingContainerView.swift */,
+				GG000005 /* Steps */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		GG000005 /* Steps */ = {
+			isa = PBXGroup;
+			children = (
+				AA000021 /* WelcomeStepView.swift */,
+				AA000022 /* PersonalInfoStepView.swift */,
+				AA000023 /* FitnessLevelStepView.swift */,
+				AA000024 /* InjuriesStepView.swift */,
+				AA000025 /* GoalsStepView.swift */,
+				AA000026 /* TimeEquipmentStepView.swift */,
+				AA000027 /* SleepStressStepView.swift */,
+				AA000028 /* DisciplineExperienceStepView.swift */,
+				AA000029 /* ActivityPreferencesStepView.swift */,
+				AA00002A /* OnboardingCompleteStepView.swift */,
+			);
+			path = Steps;
+			sourceTree = "<group>";
+		};
+		GG000006 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				AA000030 /* HomeView.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		GG000007 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				AA000031 /* OnboardingProgressBar.swift */,
+				AA000032 /* StepButton.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		GG000008 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				AA000040 /* OnboardingViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		GG000009 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				AA000050 /* HealthKitService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		GG000010 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				AA000060 /* UserRepository.swift */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		GG000011 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				AA000070 /* Color+Extensions.swift */,
+				AA000071 /* View+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		GG000098 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AA000099 /* FitnessGenome.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		GG000099 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AA000080 /* HealthKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AA005000 /* FitnessGenome */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AA006000 /* Build configuration list for PBXNativeTarget "FitnessGenome" */;
+			buildPhases = (
+				AA002000 /* Frameworks */,
+				AA002001 /* Sources */,
+				AA002002 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FitnessGenome;
+			productName = FitnessGenome;
+			productReference = AA000099 /* FitnessGenome.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AA007000 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1540;
+				LastUpgradeCheck = 1540;
+				TargetAttributes = {
+					AA005000 = {
+						CreatedOnToolsVersion = 15.4;
+					};
+				};
+			};
+			buildConfigurationList = AA006001 /* Build configuration list for PBXProject "FitnessGenome" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = es;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				es,
+				en,
+				Base,
+			);
+			mainGroup = GG000001;
+			productRefGroup = GG000098 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AA005000 /* FitnessGenome */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AA010090 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA000090 /* Assets.xcassets */; };
+/* End PBXBuildFile section - extra */
+
+/* Begin PBXResourcesBuildPhase section */
+		AA002002 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AA010090 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AA002001 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AA010001 /* FitnessGenomeApp.swift in Sources */,
+				AA010010 /* UserProfile.swift in Sources */,
+				AA010011 /* FitnessGenomeModel.swift in Sources */,
+				AA010012 /* WeeklyPlan.swift in Sources */,
+				AA010013 /* SessionLog.swift in Sources */,
+				AA010014 /* ActivityType.swift in Sources */,
+				AA010020 /* OnboardingContainerView.swift in Sources */,
+				AA010021 /* WelcomeStepView.swift in Sources */,
+				AA010022 /* PersonalInfoStepView.swift in Sources */,
+				AA010023 /* FitnessLevelStepView.swift in Sources */,
+				AA010024 /* InjuriesStepView.swift in Sources */,
+				AA010025 /* GoalsStepView.swift in Sources */,
+				AA010026 /* TimeEquipmentStepView.swift in Sources */,
+				AA010027 /* SleepStressStepView.swift in Sources */,
+				AA010028 /* DisciplineExperienceStepView.swift in Sources */,
+				AA010029 /* ActivityPreferencesStepView.swift in Sources */,
+				AA01002A /* OnboardingCompleteStepView.swift in Sources */,
+				AA010030 /* HomeView.swift in Sources */,
+				AA010031 /* OnboardingProgressBar.swift in Sources */,
+				AA010032 /* StepButton.swift in Sources */,
+				AA010040 /* OnboardingViewModel.swift in Sources */,
+				AA010050 /* HealthKitService.swift in Sources */,
+				AA010060 /* UserRepository.swift in Sources */,
+				AA010070 /* Color+Extensions.swift in Sources */,
+				AA010071 /* View+Extensions.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		AA008001 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		AA008002 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		AA009001 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = FitnessGenome/FitnessGenome.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "";
+				DEVELOPMENT_TEAM = "";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = FitnessGenome/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.fitnessgenome.app;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		AA009002 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = FitnessGenome/FitnessGenome.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "";
+				DEVELOPMENT_TEAM = "";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = FitnessGenome/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.fitnessgenome.app;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AA006000 /* Build configuration list for PBXNativeTarget "FitnessGenome" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AA009001 /* Debug */,
+				AA009002 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AA006001 /* Build configuration list for PBXProject "FitnessGenome" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AA008001 /* Debug */,
+				AA008002 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+	};
+	rootObject = AA007000 /* Project object */;
+}
