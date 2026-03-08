@@ -34,8 +34,26 @@ jobs:
             -scheme "FitnessGenome" \
             -destination "generic/platform=iOS Simulator" \
             -configuration Debug \
+            -derivedDataPath "$RUNNER_TEMP/DerivedData" \
             CODE_SIGNING_ALLOWED=NO \
             CODE_SIGNING_REQUIRED=NO \
             SWIFT_VERSION=6.0 \
             ENABLE_ON_DEMAND_RESOURCES=NO \
             clean build 2>&1
+
+      - name: Package simulator app
+        run: |
+          APP_PATH=$(find "$RUNNER_TEMP/DerivedData" -name "FitnessGenome.app" -path "*/Debug-iphonesimulator/*" | head -1)
+          echo "Found app at: $APP_PATH"
+          mkdir -p "$RUNNER_TEMP/Payload"
+          cp -R "$APP_PATH" "$RUNNER_TEMP/Payload/FitnessGenome.app"
+          cd "$RUNNER_TEMP"
+          zip -r FitnessGenome-Simulator.zip Payload
+          echo "APP_ZIP=$RUNNER_TEMP/FitnessGenome-Simulator.zip" >> $GITHUB_ENV
+
+      - name: Upload simulator build
+        uses: actions/upload-artifact@v4
+        with:
+          name: FitnessGenome-Simulator
+          path: ${{ env.APP_ZIP }}
+          retention-days: 7
