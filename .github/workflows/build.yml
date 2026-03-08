@@ -45,10 +45,8 @@ jobs:
         run: |
           APP_PATH=$(find "$RUNNER_TEMP/DerivedData" -name "FitnessGenome.app" -path "*/Debug-iphonesimulator/*" | head -1)
           echo "Found app at: $APP_PATH"
-          mkdir -p "$RUNNER_TEMP/Payload"
-          cp -R "$APP_PATH" "$RUNNER_TEMP/Payload/FitnessGenome.app"
-          cd "$RUNNER_TEMP"
-          zip -r FitnessGenome-Simulator.zip Payload
+          cd "$(dirname "$APP_PATH")"
+          zip -r "$RUNNER_TEMP/FitnessGenome-Simulator.zip" FitnessGenome.app
           echo "APP_ZIP=$RUNNER_TEMP/FitnessGenome-Simulator.zip" >> $GITHUB_ENV
 
       - name: Upload simulator build
