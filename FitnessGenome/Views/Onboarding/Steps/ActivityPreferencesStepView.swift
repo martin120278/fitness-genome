@@ -91,7 +91,7 @@ struct ActivityPreferencesStepView: View {
         }
     }
 
-    private enum ChipState { case preferred, disliked, neutral }
+    fileprivate enum ChipState { case preferred, disliked, neutral }
 
     private func state(for activity: ActivityType, mode: GridMode) -> ChipState {
         if vm.preferredActivities.contains(activity) { return .preferred }
